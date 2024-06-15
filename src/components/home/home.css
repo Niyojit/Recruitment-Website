@@ -1,0 +1,124 @@
+/* src/index.css */
+
+/* Original Styles */
+.homeWrapper {
+    background-color: rgb(156, 170, 233);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 600px;
+}
+
+.homeWrapperLeft {
+    margin-left: 30px;
+    margin-top: 100px;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.homeWrapperLeftContent {
+    font-size: 80px;
+    font-weight: bolder;
+    color: rgb(0, 0, 12);
+    font-family: "Roboto Slab", serif;
+}
+
+.homeWrapperLeftContentbtns {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.homeWrapperLeftbtn1 {
+    border-radius: 20px;
+    background-color: rgb(5, 21, 253);
+    color: rgb(246, 246, 250);
+    width: 140px;
+    height: 40px;
+    font-weight: 900;
+    margin: 20px;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    box-shadow: 0 4px 6px -6px #510505;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.homeWrapperLeftbtn1:hover {
+    background-color: aliceblue;
+    color: blue;
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 0 10px rgba(59, 101, 192, 0.8), 0 0 20px rgba(0, 255, 0, 0.6);
+}
+
+.homeWrapperRight {
+    margin-right: 60px;
+}
+
+.homeWrapperRightimg {
+    width: 85%;
+    height: 400px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 40px;
+    margin-top: 60px;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.homeWrapperRightimg:hover {
+    transform: scale(1.1); /* Scale up the image when hovered */
+}
+
+.homeWrapperLeftContenttxt {
+    color: rgb(4, 4, 252);
+    display: inline-block;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.homeWrapperLeftContenttxt:hover {
+    text-shadow: 0 0 10px rgba(78, 107, 202, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .homeWrapper {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+    .homeWrapperLeft {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .homeWrapperLeftContent {
+        font-size: 50px;
+    }
+    .homeWrapperRight {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .homeWrapperRightimg {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+    .homeWrapperLeftbtn1 {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .homeWrapperLeftContent {
+        font-size: 40px;
+        margin: 0px;
+    }
+    .homeWrapperLeftbtn1 {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+}

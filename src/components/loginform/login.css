@@ -1,0 +1,75 @@
+/* src/App.css */
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+  
+  .form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-title {
+    margin-bottom: 20px;
+    color: #1e3c72;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1e3c72;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-button {
+    background: #1e3c72;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background: #2a5298;
+  }
+  
+  .toggle-container {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #1e3c72;
+    cursor: pointer;
+  }
+  
+  .toggle-button:hover {
+    text-decoration: underline;
+  }
+  
