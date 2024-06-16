@@ -2,14 +2,13 @@ const express = require("express");
 const mongoose = require('mongoose');
 const cors = require("cors");
 const EmployeeModel = require('./models/Employee');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-// MongoDB connection
-const dbURI = process.env.MONGODB_URI || "mongodb://localhost:27017";
-mongoose.connect(dbURI, {
+mongoose.connect("mongodb://localhost:27017/Recruitment", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -39,16 +38,6 @@ app.post('/register', (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
-// Serve static assets if in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(3001, () => {
+  console.log("Server is running on port 3001");
 });
